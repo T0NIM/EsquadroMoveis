@@ -155,3 +155,81 @@ header{
     transform: translateY(-10px);
     color: #021b12;
 }
+
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.titulo-projeto{
+    color:#056442;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 150%;
+    text-align: center;
+}
+
+.slide1{
+    width: 100%;
+    height: 304px;
+    display: flex;
+    gap: 37px;
+    overflow-x: hidden;
+}
+
+.slide2{
+    width: 100%;
+    height: 304px;
+    display: flex;
+    gap: 37px;
+    overflow-x: hidden;
+}
+
+.diferenciais{
+    background-color: #056442;
+    width: 100%;
+    height: 207px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-diferenciais{
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #022C1D;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 150%; 
+}
+.container-diferenciais{
+    display: flex;
+    gap: 30px;
+}
+.bloco-diferenciais{
+    display: flex;
+    gap: 20px;
+}
+.bloco-ico{
+    display: flex;
+    align-items: center;
+}
+.bloco-ico img{
+    width: 50px;
+}
+
+.bloco-txt{
+    max-width: 250px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bloco-txt h3,p{
+    margin: 0;
+}
