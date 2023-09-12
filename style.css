@@ -161,6 +161,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 25px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to right, white, #CBEADF);
 }
 
 
@@ -238,3 +240,44 @@ header{
 .bloco-txt h3,p{
     margin: 0;
 }
+
+.avaliacoes{
+    padding: 50px 0;
+}
+
+.service-container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.service-content{
+    display: flex;
+    align-items: center;
+}
+
+.service-content-box {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+}
+
+
+.service-content-box-right {
+    background-color: #056442;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    margin-left: -80px; /* Margem negativa para sobrepor a imagem */
+    z-index: 1;
+}
+
+.service-content-box-right h3 {
+    margin-top: 15px;
+    font-size: 26px;
+    text-align: center;
+}
+
