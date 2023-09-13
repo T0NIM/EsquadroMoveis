@@ -4,7 +4,7 @@ body {
     font-family: 'Inter' , sans-serif;  
 }
 header{
-    background-image: linear-gradient(to right, #AED6C8 68%, #CBEADF 32%);
+    background-image: linear-gradient(to right, #AED6C8 65.7%, #CBEADF 32%);
     height: 100vh;
     width: 100%;
     
@@ -19,13 +19,12 @@ header{
     align-items: center;
     padding: 19.5px 0;
 }
-.nav-bar img {
+.nav-bar-logo {
     width: 216px;
     height: 47px;
 }
 .nav-bar ul {
     display: flex;
-    flex-wrap: wrap;
     list-style: none;
     gap: 32px;
     align-items: center;
@@ -62,18 +61,30 @@ header{
     height: 29px;
 }
 
-.nav-bar button {
+.btn-orcamento{
     background: #056442;
+    font-family: 'Roboto';
     color: white;
     border-style: none;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: 800;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14.5px;
+    letter-spacing: 1px;
 }
 
-.nav-bar button:hover{
+.nav-bar button{
     cursor: pointer;
 }
+
+.btn-menu{
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    display: none;
+}
+
 
 .bar-slide{
     background-color: transparent;
@@ -97,20 +108,20 @@ header{
 }
 
 .carrosel{
+    
     background-color: transparent;
-    height: calc(100vh - 293px);
-    align-items: last baseline;
+    height: calc(100vh - 297px);
     display: flex;
 }
 .carrosel-images{
-   
+    height: calc(100vh - 297px);
     display: flex;
     gap: 20px;
     overflow-x: hidden;
 }
 .carrosel-images img{
     width: 1000px;
-    height: 480px;
+    height: 486px;
 }
 .icons{
     height: max-content;
@@ -198,18 +209,18 @@ header{
 .diferenciais{
     background-color: #056442;
     width: 100%;
-    height: 207px;
+    height: 247px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .titulo-diferenciais{
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
     text-align: center;
     color: #022C1D;
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 800;
     line-height: 150%; 
 }
@@ -281,3 +292,141 @@ header{
     text-align: center;
 }
 
+.pormade {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(97, 95, 95);
+    font-size: 18px;
+}
+.pormade img{
+    width: 200px;
+}
+.pormade p {
+    margin: 35px 0;
+}
+.container-pormade{
+    padding-top: 50px;
+}
+.videos {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 150px;
+}
+
+iframe {
+    border-radius: 20px;
+}
+
+.bar-footer{
+    content: '';
+    height: 1.5px;
+    width: 82%;
+    margin: auto;
+    background-color: gray;
+}
+footer {
+    background: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+.container-footer {
+    display: flex;
+    gap: 100px;
+}
+.container-footer img {
+    width: 30px;
+}
+
+#ecology-icon {
+    width: 75px;
+}
+#planting-icon {
+    width: 15px;
+}
+
+.local {
+    margin: auto;
+}
+
+.local p {
+    color: #4A4A4A;
+    margin: auto;
+}
+
+.social-links {
+    display: block;
+    margin: auto;
+}
+
+.img-social-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+    margin: 10px 0;
+}
+.social-links li {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.social-links a {
+    color: #056442;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.social-links li a img {
+    width: 83px;
+}
+
+.social-links p {
+    color: #A7A5A5;
+    margin: 0;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.ecology {
+    margin: auto;
+    color: #056442;
+}
+.ecology p {
+    margin: 0;
+}
+
+.ecology span {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1400px){
+    .nav-bar{
+        margin: auto 80px;
+    }
+}
+@media screen and (max-width:1260px){
+    .nav-bar{
+        margin: auto 40px;
+    }
+    .nav-bar ul{
+        display: none;
+    }
+    
+    .btn-menu{
+        display: block;
+    }
+}

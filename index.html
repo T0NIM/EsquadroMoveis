@@ -8,23 +8,22 @@
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
     <script src="script.js"></script>
     </head>
 <body>
     <header>
         <div class="nav-bar">
-            <a href="http://localhost:5500/index.html" class="logo"><img src="./assets/logo-esquadro-moveis.png" alt="Logotipo Esquadro Móveis"></a>
+            <a href="http://localhost:5500/index.html" class="logo"><img class="nav-bar-logo"src="./assets/logo-esquadro-moveis.png" alt="Logotipo Esquadro Móveis"></a>
             <ul>
                 <li><a class="links"href="#">Institucional</a></li>
                 <li><a class="links"href="#">Ambientes</a></li>
                 <li><a class="links"href="#">Projetos</a></li>
                 <li><a href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
-                <a href="#"><button>ORÇAMENTO</button></a>
+                <a href="#"><button class="btn-orcamento">SOLICITAR ORÇAMENTO</button></a>
+                
             </ul>
+            <button class="btn-menu"><img src="assets/hamburguer-menu.svg" alt="menu"></button>
         </div>
 
         <div class="bar-slide">
@@ -163,7 +162,7 @@
         <div class="service-content">
             <div class="service-content-box">
                 <div class="service-content-box-left">
-                    <img src="assets/img-institucional.jpg"  alt="" />
+                    <img src="assets/institucional-img.jpg"  alt="" />
                 </div>
                 <div class="service-content-box-right">
                     <p>Visamos a qualidade e a satisfação total dos nossos clientes, trabalhando com profissionais altamente 
@@ -178,5 +177,45 @@
         </div>
         </div>
     </div>
+    <div class="pormade">
+        <div class="container-pormade">
+            <img src="./assets/logo-pormade.png" alt="logo pormade portas">
+            <p>Conheça o Melhor Kit Porta Pronta do Brasil!</p>
+            <div class="videos">
+                <iframe width="396" height="223" src="https://www.youtube.com/embed/SmHevH471Sc?si=34uR3z6kgFbTgls_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="396" height="223" src="https://www.youtube.com/embed/SmHevH471Sc?si=34uR3z6kgFbTgls_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="396" height="223" src="https://www.youtube.com/embed/qKECxyQjxh0?si=p-tQs73kF6-ed1r3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+            </div>
+        </div>
+    </div>
+    <div class="bar-footer"></div>
+    <footer>
+        <div class="container-footer">
+            <div class="local">
+                <img src="./assets/map-marker.png" alt="local icon">
+                <p>Av. Sete, 530 - Progresso,<br>
+                    Ituiutaba - MG, 38302-032
+                </p>
+            </div>
+            <div class="social-links">
+                <div class="img-social-links">
+                <a href="#"><img src="./assets/instagram.png" alt="insta icon"></a>
+                <a href="#"><img src="./assets/facebook.png" alt="face icon"></a>
+                <a href="#"><img src="./assets/youtube.png" alt="youtube icon"></a>
+                </div>
+                <ul>
+                    <li><a class="links" href="#">Institucional</a></li>
+                    <li><a class="links" href="#">Ambientes</a></li>
+                    <li><a class="links" href="#">Projetos</a></li>
+                    <li><a href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
+                </ul>
+                	<p>&copy;2023 <span><b>Esquadro Móveis</b></span></p>
+            </div>
+            <div class="ecology">
+                <img src="./assets/ecology-3d.png" alt="ecology icon 3d" id="ecology-icon">
+                <p>EMPRESA <span>ECOLÓGICA</span> <img src="./assets/tree-planting.png" alt="planting icon" id="planting-icon"></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
