@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter' , sans-serif;  
+    font-family: 'Inter' , sans-serif;
 }
 header{
     background-image: linear-gradient(to right, #AED6C8 65.7%, #CBEADF 32%);
@@ -457,8 +457,17 @@ footer {
     font-weight: 700;
 }
 
-
-
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-button img {
+    width: 60px;
+  }
+  
 @media screen and (max-width: 1400px){
     .nav-bar{
         margin: auto 80px;
@@ -773,7 +782,7 @@ footer {
         font-size: 14.5px;
     }
 
-    .local p{
+    .local{
         padding-left: 20px;
     }
 
@@ -785,7 +794,8 @@ footer {
 @media screen and (max-width:600px){
   
     .nav-manual, .nav-auto{
-        top: 60%;
+        top:0;
+        margin-top: 450px;
     }
     .container-icons span{
         font-size: 15px;
@@ -820,6 +830,8 @@ footer {
     }
 
 }
+
+
 @media screen and (max-width:580px){
 
     .titulo-diferenciais{
@@ -837,7 +849,18 @@ footer {
     }
 }
 
+@media screen and (max-width: 572px){
+    .nav-manual, .nav-auto{
+        margin-top: 430px;
+    }
+}
+
 @media screen and (max-width:530px){
+
+    .nav-manual, .nav-auto{
+        margin-top: 410px;
+    }
+
     .titulo-projeto{
         font-size: 22px;
     }
@@ -849,6 +872,7 @@ footer {
     .titulo-diferenciais{
         font-size: 22.5px;
     }
+
     .bloco-txt{
         max-width: 150px;
     }
@@ -859,10 +883,17 @@ footer {
     .bloco-txt p{
         font-size: 13.5px;
     }
+
+
 }
 
 @media screen and (max-width:500px){
-
+    .nav-manual, .nav-auto{
+        margin-top: 390px;
+    }
+    .whatsapp-button img{
+        width: 50px;
+    }
     .local p, .ecology p, .social-links a, .social-links p{
         font-size: 14px;
     }
@@ -875,3 +906,239 @@ footer {
     }
 }
 
+@media screen and (max-width:471px){
+
+    .nav-manual, .nav-auto{
+        margin-top: 360px;
+    }
+
+    .slide-bloco img{
+        width: 80%;
+    }
+
+    .container-footer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:441px){
+    .titulo-projeto{
+        font-size: 23px;
+        max-width: 80%;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .whatsapp-button img{
+        width: 45px;
+    }
+}
+
+@media screen and (max-width:430px){
+    .nav-manual, .nav-auto{
+        margin-top: 350px;
+    }
+    .container-icons{
+        padding: 0;
+        margin: auto;
+        gap: 15px;
+        max-width: 400px;
+        justify-content: center;
+    }
+    .mobile-config{
+        padding-top: 15px;
+    }
+    .container-icons img{
+        width: 24px;
+    }
+
+    .container-icons span{
+        font-size: 13px;
+    }
+
+    .container-diferenciais{
+        max-width: 400px;
+    }
+
+    .bloco-diferenciais p{
+        font-size: 12px;
+    }
+    .bloco-diferenciais h3{
+        font-size: 13.5px;
+    }
+    .bloco-txt{
+        max-width: 200px;
+    }
+    .container-footer{
+        gap: 10px;
+    }
+    .local p, .ecology p, .social-links a, .social-links p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:415px){
+
+    .nav-bar-logo{
+        width: 180px;
+        height: auto;
+    }
+    .mobile-links .links{
+        top: 67px;
+        
+    }
+
+    .mobile-links .links a{
+        font-size: 14px;
+    }
+    .nav-manual, .nav-auto{
+        margin-top: 340px;
+    }
+
+    .container-diferenciais{
+        max-width: 290px;
+    }
+    .videos iframe{
+        width: 90%;
+    }
+ 
+}
+
+@media screen and (max-width:400px){
+    .nav-manual, .nav-auto{
+        margin-top: 320px;
+    }
+    .nav-bar-logo{
+        padding-left:5px;
+    }
+
+    .btn-menu img{
+       
+    }
+    .nav-bar-logo{
+        width: 150px;
+        height: auto;
+    }
+
+    .mobile-links .links{
+        top: 61.6px;
+    }
+    .mobile-links .links a{
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (max-width:388px){
+    .nav-manual, .nav-auto{
+        margin-top: 305px;
+    }
+    .ecology img{
+        width: 10px;
+        height: auto;
+    }
+    .social-links ul li img{
+        width: 50px; 
+        padding-left:5px ;
+    }
+    .local p, .ecology p, .ecology span, .social-links a{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:364px){
+    .nav-manual, .nav-auto{
+        margin-top: 295px;
+    }
+    .icons{
+        padding-bottom: 20px;
+        padding-top: 20px;        
+    }
+    .icons span{
+        font-size: 12px;
+    }
+    
+    .mobile-config{
+        padding-top: 0;
+    }
+    .container-icons{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .slide-bloco img{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:350px){
+    .nav-bar{
+        justify-content: center;
+    }
+    .btn-menu img{
+        width: 26px;
+    }
+
+    .nav-manual, .nav-auto{
+        margin-top: 275px;
+    }
+    .icons span{
+        font-size: 10px;
+    }
+
+    .bloco-icons img{
+        width: 20px;
+    }
+
+    .titulo-projeto{
+        font-size: 22px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        max-width: 75%;
+    }
+    .container-pormade img{
+        width: 140px;
+    }
+    .container-pormade p{
+        font-size:17px;
+        max-width: 250px;
+        margin: auto;
+        padding: 30px 0;
+    }
+    img#ecology-icon{
+        width: 35px;
+        height: auto;
+        padding-bottom: 5px;
+    }
+    .local img{
+        width: 24px;
+    }
+
+    .local p, .social-links a, .social-links p, .ecology p, .ecology p span{
+        font-size: 10px;
+    }
+    .ecology{
+        width: 100px;
+
+    }
+    .txt-ecology{
+        max-width: 60px;
+        margin:auto;
+    }
+
+    .img-social-links img{
+        width: 22px;
+    }
+    footer{
+        margin-top: 30px;
+    }
+    .container-footer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:316px){
+    .nav-manual, .nav-auto{
+        margin-top: 260px;
+    }
+
+}

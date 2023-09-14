@@ -16,20 +16,20 @@
         <div class="nav-bar">
             <a href="http://localhost:5500/index.html" class="logo"><img class="nav-bar-logo"src="./assets/logo-esquadro-moveis.png" alt="Logotipo Esquadro Móveis"></a>
             <ul class="links">
-                <li><a class="link nav-item"href="#">Institucional</a></li>
-                <li><a class="link nav-item"href="#">Ambientes</a></li>
-                <li><a class="link nav-item"href="#">Projetos</a></li>
-                <li><a class="link-pormade" href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
+                <li><a class="link nav-item"href="#institucional">Institucional</a></li>
+                <li><a class="link nav-item"href="#icons">Ambientes</a></li>
+                <li><a class="link nav-item"href="#projetos">Projetos</a></li>
+                <li><a class="link-pormade" href="#pormade"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
                 <a class="link-btn"href="#"><button class="btn-orcamento">SOLICITAR ORÇAMENTO</button></a>
                 
             </ul>
             
             <div class="mobile-links">
                 <ul class="links">
-                    <li><a class="nav-item"href="#">Institucional</a></li>
-                    <li><a class="nav-item"href="#">Ambientes</a></li>
-                    <li><a class="nav-item"href="#">Projetos</a></li>
-                    <li><a class="nav-item"href="#">Pormade Portas</a></li>
+                    <li><a class="nav-item"href="#institucional">Institucional</a></li>
+                    <li><a class="nav-item"href="#ambientes">Ambientes</a></li>
+                    <li><a class="nav-item"href="#projetos">Projetos</a></li>
+                    <li><a class="nav-item"href="#pormade">Pormade Portas</a></li>
                     
                 </ul>
             </div>
@@ -70,7 +70,7 @@
             </div>
         </section>
         
-        <div class="icons">
+        <div class="icons" id="icons">
             <div class="container-icons">
                 <div class="bloco-icons">
                     <span>
@@ -97,19 +97,19 @@
                     </span>
                 </div>
                 <div class="bloco-icons">
-                    <span>
+                    <span class="mobile-config">
                         <img src="./assets/porta-pronta.svg" alt="ícone porta pronta">
                         Porta Pronta
                     </span>
                 </div>
                 <div class="bloco-icons">
-                    <span>
+                    <span class="mobile-config">
                         <img src="./assets/home-theater.svg" alt="ícone home theater">
                         Home Theater
                     </span>
                 </div>
                 <div class="bloco-icons">
-                    <span>
+                    <span class="mobile-config">
                         <img src="./assets/banheiros.svg" alt="ícone banheiros">
                         Banheiros
                     </span>
@@ -117,7 +117,7 @@
             </div>
         </div>
     </header>
-    <div class="projetos">
+    <div class="projetos" id="projetos">
         <h1 class="titulo-projeto">O PRÓXIMO PROJETO PODE SER O SEU!</h1>
         <div class="container-slide">
             <div class="slide-bloco">
@@ -195,7 +195,7 @@
         </div>
         </div>
     </div>
-    <div class="pormade">
+    <div class="pormade" id="pormade">
         <div class="container-pormade">
             <img src="./assets/logo-pormade.png" alt="logo pormade portas">
             <p>Conheça o Melhor Kit Porta Pronta do Brasil!</p>
@@ -222,18 +222,25 @@
                 <a href="https://www.youtube.com/@PormadeOficial" target="_blank"><img src="./assets/youtube.png" alt="youtube icon"></a>
                 </div>
                 <ul>
-                    <li><a class="links" href="#">Institucional</a></li>
-                    <li><a class="links" href="#">Ambientes</a></li>
-                    <li><a class="links" href="#">Projetos</a></li>
-                    <li><a href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
+                    <li><a class="links" href="#institucional">Institucional</a></li>
+                    <li><a class="links" href="#ambientes">Ambientes</a></li>
+                    <li><a class="links" href="#projetos">Projetos</a></li>
+                    <li><a href="#pormade"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
                 </ul>
                 	<p>&copy;2023 <span><b>Esquadro Móveis</b></span></p>
             </div>
             <div class="ecology">
                 <img src="./assets/ecology-3d.png" alt="ecology icon 3d" id="ecology-icon">
-                <p>EMPRESA <span>ECOLÓGICA</span> <img src="./assets/tree-planting.png" alt="planting icon" id="planting-icon"></p>
+                <div class="txt-ecology">
+                    <p>EMPRESA <span>ECOLÓGICA</span> <img src="./assets/tree-planting.png" alt="planting icon" id="planting-icon"></p>
+                </div>
             </div>
         </div>
     </footer>
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=5534998684299" target="_blank">
+          <img src="./assets/button-whatsapp.png" alt="WhatsApp"/>
+        </a>
+      </div>      
 </body>
 </html>
