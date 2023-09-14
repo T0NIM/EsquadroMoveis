@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Inter' , sans-serif;  
 }
 header{
@@ -29,7 +30,7 @@ header{
     gap: 32px;
     align-items: center;
 }
-.nav-bar ul a.links {
+.nav-bar ul a.link {
     text-decoration: none;
     color: #056442;
     font-size: 16px;
@@ -44,16 +45,14 @@ header{
     position: absolute;
     bottom: -5px; /* Ajuste a posição do traço conforme necessário */
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 2px;
     background-color: #056442;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: 0.3s;
 }
 
 .nav-bar ul li:hover::after {
-    transform: scaleX(1);
+    width: 100%;
 }
 
 .nav-bar ul a img {
@@ -76,6 +75,10 @@ header{
 .nav-bar button{
     cursor: pointer;
 }
+.mobile-links{
+    display: none;
+}
+
 
 .btn-menu{
     border: none;
@@ -85,57 +88,100 @@ header{
     display: none;
 }
 
-
-.bar-slide{
-    background-color: transparent;
-    margin: auto;
-    width: 1200px;
-    display: flex;
-    height: 50px;
-}
-
-
-.slide-dot{
+section.slider{
+    margin: 0 auto;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: right;
-}
-.slide-setas{
-   width: 100%;
-   display: flex;
-   justify-content: right;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
 }
 
-.carrosel{
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
     
-    background-color: transparent;
-    height: calc(100vh - 297px);
+}
+
+.slider-content input{
+   display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: calc(100vh - 247px);
+    position: relative;
+    text-align: center;
+    transition: 0.3s ease;
+    
+}
+
+.slide-box img{
+    width: 100%;
+    height: calc(100vh - 247px);
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    top: 78%;
     display: flex;
+    justify-content: center;
+    gap: 10px;
 }
-.carrosel-images{
-    height: calc(100vh - 297px);
-    display: flex;
-    gap: 20px;
-    overflow-x: hidden;
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid #022C1D;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in;
 }
-.carrosel-images img{
-    width: 1000px;
-    height: 486px;
+
+.nav-manual .manual-btn:hover{
+    background-color: #022C1D;
 }
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: #022C1D;
+}
+
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: #022C1D;
+}
+
+#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #022C1D;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
 .icons{
     height: max-content;
     background-color: #056442;
     display: flex;
-    justify-content:  center;
+    justify-content:  last baseline;
     padding: 40px 0;
-    border-top: 1px solid rgba(128, 128, 128, 0.425);
+    border-top: 1px solid rgba(128, 128, 128, 0.425); 
 }
 .container-icons {
     height:max-content;
     width:max-content;
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
 }
 
 .bloco-icons{
@@ -169,11 +215,9 @@ header{
 }
 
 .projetos{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding-bottom: 50px;
-    background-image: linear-gradient(to right, white, #CBEADF);
+    padding-bottom: 20px;
+    background-color: white;
+    height: max-content;
 }
 
 
@@ -185,25 +229,23 @@ header{
     line-height: 150%;
     text-align: center;
 }
-.container-slide1{
+.container-slide{
     width: 100%;
-    height: 304px;
-   
+    height: max-content;
 }
-.slide1{
+
+.container-slide img {
+    border-radius: 10px;
+}
+
+.slide-bloco{
+    position: relative;
     display: flex;
+    flex-wrap: wrap;
     gap: 37px; 
     overflow-x: hidden;
-}
-.container-slide2{
-    width: 100%;
-    height: 304px;
-    
-}
-.slide2{
-    display: flex;
-    gap: 37px;
-    overflow-x: hidden;
+    justify-content: center;
+    margin: auto;
 }
 
 .diferenciais{
@@ -311,6 +353,7 @@ header{
 }
 .videos {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-bottom: 150px;
 }
@@ -366,7 +409,7 @@ footer {
 
 .img-social-links {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -376,8 +419,9 @@ footer {
     list-style: none;
     gap: 32px;
     align-items: center;
-    margin: 10px 0;
+    padding: 0;
 }
+
 .social-links li {
     display: flex;
     gap: 32px;
@@ -413,20 +457,421 @@ footer {
     font-weight: 700;
 }
 
+
+
 @media screen and (max-width: 1400px){
     .nav-bar{
         margin: auto 80px;
     }
-}
-@media screen and (max-width:1260px){
-    .nav-bar{
-        margin: auto 40px;
+    .slide-bloco{
+        gap: 20px;
     }
-    .nav-bar ul{
-        display: none;
+
+    .container-slide img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:1340px){
+
+    .container-slide img{
+        width: 350px;
+    }
+
+    .titulo-diferenciais{
+        font-size: 30px;
+    }
+    .container-diferenciais{
+        width: 1100px;
+    }
+    .bloco-ico img{
+        width: 42px;
+    }
+    .bloco-txt{
+        max-width: 320px;
+    }
+    .bloco-txt h3{
+        font-size: 17px;
+    }
+
+    .bloco-txt p{
+        font-size: 15.5px;
+    }
+
+    .videos{
+        justify-content: center;
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width:1260px){
+    header{
+        height: max-content;
+    }
+    .nav-bar{
+        margin: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     
     .btn-menu{
         display: block;
     }
+
+    .link-btn{
+        display: none;
+    }
+
+    .link-pormade{
+        display: none;
+    }
+
+    .nav-item{
+        display: none;
+    }
+
+    .mobile-links .nav-item{
+        display: block;
+    }
+
+
+    
+    .mobile-links .links{
+        gap: 0;
+        flex-direction: column;
+        position: absolute;
+        background-color: #022c1da9;
+        width: 100%;
+        top: 74px;
+        left: 0;
+        z-index: 5;
+        padding: 0;
+    }
+    .mobile-links ul li{
+        width: 100%;
+    }
+    .mobile-links .links a{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        font-size: 16px;
+        color: white;
+        font-weight: 400;
+        background-color: transparent;
+        width: 100%;
+        text-transform: none;
+        text-decoration: none;
+    }
+    
+    .mobile-links .links a:hover{
+        background-color: #056442;
+        font-weight: 600;
+    }
+
+    .mobile-links ul li::after{
+        display: none;
+    }
+
+    .open{
+        display: block;
+    }
 }
+@media screen and (max-width:1170px){
+
+    .titulo-diferenciais{
+        font-size: 28px;
+    }
+
+    .container-diferenciais{
+        width: 900px;
+        
+    }
+    .bloco-ico img{
+        width: 42px;
+    }
+    .bloco-txt{
+        max-width: 400px;
+    }
+    .bloco-txt h3{
+        font-size: 16.5px;
+    }
+
+    .bloco-txt p{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:1135px){
+ 
+    .container-slide img{
+    width: 320px;
+   }
+
+   .container-footer{
+    gap: 50px;
+   }
+
+   .local p, .ecology p, .social-links a, .social-links p{
+    font-size: 15px;
+   }
+}
+
+@media screen and (max-width:1055px){
+    .container-icons{
+        max-width: 600px;
+        justify-content: center;
+    }
+
+    .container-slide img{
+        width: 290px;
+    }
+}
+@media screen and (max-width: 1010px) {
+    .diferenciais{
+        height: max-content;
+        padding-bottom: 20px;
+    }
+    .container-diferenciais{
+        flex-wrap: wrap;
+        gap: 40px;
+        width: 700px;
+        justify-content: center;
+    }
+
+    .bloco-txt{
+        max-width: 200px;
+        padding-bottom: 20px;
+    }
+
+   
+}
+
+@media screen and (max-width: 959px) {
+        
+    .container-slide img{
+        width: 270px;
+    }
+
+    .slide-bloco{
+        gap: 15px;
+    }
+
+    .service-content-box-right{
+        margin-left: -130px;
+    }
+}
+
+@media screen and (max-width:924px){
+    .container-footer{
+        gap: 70px;
+    }
+
+    .social-links ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .social-links li a img{
+        width: 70px;
+        padding-left: 12px;
+    }
+
+}
+
+@media screen and (max-width: 890px) {
+        
+    .service-container, .service-content, .service-content-box{
+        display: block;
+    }
+    .service-container{
+        padding: 0;
+    }
+    .service-content-box-left{
+        width: 100%;
+    }
+    .service-content-box-left img{
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+    .service-content-box-right{
+        margin: 0;
+        border-radius: 0;
+    }
+    .videos{
+        max-width: 800px;
+        margin-bottom: 130px;
+    }
+}
+
+@media screen and (max-width:840px){
+    .titulo-projeto{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:760px){
+    #ecology-icon {
+        width: 65px;
+    }
+    .local p, .ecology p, .social-links a, .social-links p{
+        font-size: 14.5px;
+    }
+    .container-footer{
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width:714px){
+    .titulo-projeto{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width:690px){
+
+    .service-content-box-right p{
+        font-size: 15.2px;
+        text-align: justify;
+    }
+
+    .service-content-box-right h3{
+        font-size: 24px;
+        margin-top:25px;
+    }
+
+    .pormade img{
+        width: 180px;
+    }
+}
+
+
+@media screen and (max-width:650px){
+    .titulo-projeto{
+        font-size: 26px;
+    }
+
+    .titulo-diferenciais{
+        font-size: 26px;
+    }
+    .container-diferenciais{
+        width: 450px;
+    }
+    .bloco-diferenciais{
+        gap: 10px;
+    }
+    .bloco-txt{
+        justify-content: center;
+        padding: 0;
+    }
+    .bloco-txt h3{
+        font-size: 16px;
+    }
+
+    .bloco-txt p{
+        font-size: 14.5px;
+    }
+
+    .local p{
+        padding-left: 20px;
+    }
+
+    .ecology{
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:600px){
+  
+    .nav-manual, .nav-auto{
+        top: 60%;
+    }
+    .container-icons span{
+        font-size: 15px;
+    }
+    .container-icons img{
+        width: 28px;
+    }
+
+    .container-icons{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 500px;
+        gap: 30px;
+    }
+
+    .slide-box{
+        height: max-content;
+    }
+    .slide-box img{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: last baseline;
+    }
+
+    .titulo-projeto{
+        font-size: 24px;
+    }
+ 
+    .container-slide img {
+        width: 75%;
+    }
+
+}
+@media screen and (max-width:580px){
+
+    .titulo-diferenciais{
+        font-size: 24px;
+    }
+    .bloco-txt{
+        max-width: 150px;
+    }
+    .bloco-txt h3{
+        font-size: 15.5px;
+    }
+
+    .bloco-txt p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:530px){
+    .titulo-projeto{
+        font-size: 22px;
+    }
+
+    .container-slide img {
+        width: 70%;
+    }
+
+    .titulo-diferenciais{
+        font-size: 22.5px;
+    }
+    .bloco-txt{
+        max-width: 150px;
+    }
+    .bloco-txt h3{
+        font-size: 15px;
+    }
+
+    .bloco-txt p{
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .local p, .ecology p, .social-links a, .social-links p{
+        font-size: 14px;
+    }
+    .social-links p{
+        width: max-content;
+        padding-top: 10px;
+    }
+    .img-social-links img{
+        width: 26px;
+    }
+}
+

@@ -9,39 +9,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     </head>
 <body>
     <header>
         <div class="nav-bar">
             <a href="http://localhost:5500/index.html" class="logo"><img class="nav-bar-logo"src="./assets/logo-esquadro-moveis.png" alt="Logotipo Esquadro Móveis"></a>
-            <ul>
-                <li><a class="links"href="#">Institucional</a></li>
-                <li><a class="links"href="#">Ambientes</a></li>
-                <li><a class="links"href="#">Projetos</a></li>
-                <li><a href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
-                <a href="#"><button class="btn-orcamento">SOLICITAR ORÇAMENTO</button></a>
+            <ul class="links">
+                <li><a class="link nav-item"href="#">Institucional</a></li>
+                <li><a class="link nav-item"href="#">Ambientes</a></li>
+                <li><a class="link nav-item"href="#">Projetos</a></li>
+                <li><a class="link-pormade" href="#"><img src="./assets/logo-pormade.png" alt="Logotipo Pormade Portas"></a></li>
+                <a class="link-btn"href="#"><button class="btn-orcamento">SOLICITAR ORÇAMENTO</button></a>
                 
             </ul>
-            <button class="btn-menu"><img src="assets/hamburguer-menu.svg" alt="menu"></button>
+            
+            <div class="mobile-links">
+                <ul class="links">
+                    <li><a class="nav-item"href="#">Institucional</a></li>
+                    <li><a class="nav-item"href="#">Ambientes</a></li>
+                    <li><a class="nav-item"href="#">Projetos</a></li>
+                    <li><a class="nav-item"href="#">Pormade Portas</a></li>
+                    
+                </ul>
+            </div>
+
+            <button class="btn-menu" onclick="menuShow()"><img src="assets/hamburguer-menu.svg" alt="menu"></button>
         </div>
 
-        <div class="bar-slide">
-            <div class="slide-dot">
+        <section class="slider">
+            <div class="slider-content">
+
                 <input type="radio" name="btn-radio" id="radio1">
                 <input type="radio" name="btn-radio" id="radio2">
                 <input type="radio" name="btn-radio" id="radio3">
+
+                <div class="slide-box primeiro">
+                    <img src="assets/imagem1.jpg" alt="slide 1">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/imagem2.jpg" alt="slide 2">
+                </div>
+
+                <div class="slide-box">
+                    <img src="assets/imagem3.jpg" alt="slide 3">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div>
             </div>
-            <div class="slide-setas">
-                <p>aqui estarao as setas</p>
-            </div>
-        </div>
-        <div class="carrosel">
-            <div class="carrosel-images">
-                <img src="assets/imagem1.jpg" alt="">
-                <img src="assets/imagem2.jpg" alt="">
-            </div>
-        </div>
+        </section>
+        
         <div class="icons">
             <div class="container-icons">
                 <div class="bloco-icons">
@@ -91,24 +119,14 @@
     </header>
     <div class="projetos">
         <h1 class="titulo-projeto">O PRÓXIMO PROJETO PODE SER O SEU!</h1>
-    
-        <div class="container-slide1">
-            <div class="slide1">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
-            </div>
-        </div>
-        <div class="container-slide2">
-            <div class="slide2">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
-                <img src="assets/Image2.png" alt="projeto quarto">
+        <div class="container-slide">
+            <div class="slide-bloco">
+                <img src="assets/image1-bloco1.jpg" alt="projeto quarto">
+                <img src="assets/image2-bloco1.jpg" alt="projeto quarto">
+                <img src="assets/image3-bloco1.png" alt="projeto quarto">
+                <img src="assets/image4-bloco2.jpg" alt="projeto quarto">
+                <img src="assets/image5-bloco2.jpg" alt="projeto quarto">
+                <img src="assets/image6-bloco2.jpg" alt="projeto quarto">
             </div>
         </div>
     </div>
@@ -148,7 +166,7 @@
                 </div>
                 <div class="bloco-txt">
                     <h3>Preço Justo</h3>
-                    <p>Com transparência e<br>economia</p>
+                    <p>Com transparência e economia</p>
                 </div>
             </div>
         </div>
@@ -192,16 +210,16 @@
     <footer>
         <div class="container-footer">
             <div class="local">
-                <img src="./assets/map-marker.png" alt="local icon">
+                <a href="https://goo.gl/maps/J4VJFWAq9RpJbF4F9" target="_blank"><img src="./assets/map-marker.png" alt="local icon"></a>
                 <p>Av. Sete, 530 - Progresso,<br>
                     Ituiutaba - MG, 38302-032
                 </p>
             </div>
             <div class="social-links">
                 <div class="img-social-links">
-                <a href="#"><img src="./assets/instagram.png" alt="insta icon"></a>
-                <a href="#"><img src="./assets/facebook.png" alt="face icon"></a>
-                <a href="#"><img src="./assets/youtube.png" alt="youtube icon"></a>
+                <a href="https://www.instagram.com/esquadromoveisplanejados_/" target="_blank"><img src="./assets/instagram.png" alt="insta icon"></a>
+                <a href="https://www.facebook.com/mesq6" target="_blank"><img src="./assets/facebook.png" alt="face icon"></a>
+                <a href="https://www.youtube.com/@PormadeOficial" target="_blank"><img src="./assets/youtube.png" alt="youtube icon"></a>
                 </div>
                 <ul>
                     <li><a class="links" href="#">Institucional</a></li>
